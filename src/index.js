@@ -1,7 +1,8 @@
 export function init(){
   var $win = window;
   $win.onscroll = function () {
-      var current_pos = document.documentElement.scrollTop;
+      var doc = document.documentElement;
+      var current_pos = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
       var elements = document.getElementsByClassName("scroll-effect");
       for (var i = 0; i < elements.length; i++) {
           var element = elements[i];
