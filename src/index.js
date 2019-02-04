@@ -7,7 +7,7 @@ export function init(){
           var element = elements[i];
           var element_top = element.offsetTop - ($win.innerHeight / 2);
           if (element_top <= current_pos) { //If user has reached the position, show the element
-              //element.style.removeProperty('opacity'); //Remove display none
+              element.style.removeProperty('opacity'); //Remove display none
               //Add animation class (according to Animate.css)
               element.classList.add("animated");
               var animation = element.dataset.animation;
