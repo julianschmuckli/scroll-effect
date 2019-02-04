@@ -1,6 +1,6 @@
 {
   "name": "scroll-effect",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "A simple library, where you can flow in the elements when the users would normally see it in the screen.",
   "main": "src/index.js",
   "scripts": {

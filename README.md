@@ -11,10 +11,10 @@ All you need to do is to install the library on your project with
 npm install scroll-effect
 ```
 
-Then you can simply add to your elements, which you want to flow in later a class called "scroll-effect" and add the inline-style `display:none;`. In the end it looks something like this:
+Then you can simply add to your elements, which you want to flow in later a class called "scroll-effect" and add the inline-style `opacity:0;` or you can add an entry in your CSS where you define the .scroll-effect class as `opacity:0;`. In the end it looks something like this:
 
 ```html
-<div class='scroll-effect' style='display:none;'>
+<div class='scroll-effect' style='opacity:0;'>
 </div>
 ```
 
@@ -23,7 +23,7 @@ As this library uses the [Animate.css](https://daneden.github.io/animate.css/) l
 By default if nothing is defined like the example above, it will use the `fadeIn` animation. If you want to a custom animation, just simply add the attribute `data-animation` and set the value to the animation name.
 
 ```html
-<div class='scroll-effect' style='display:none;' data-animation="bounceInLeft">
+<div class='scroll-effect' style='opacity:0;' data-animation="bounceInLeft">
 </div>
 ```
 
