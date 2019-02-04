@@ -26,3 +26,14 @@ By default if nothing is defined like the example above, it will use the `fadeIn
 <div class='scroll-effect' data-animation="bounceInLeft">
 </div>
 ```
+
+## How to use it in Vue.js
+If you want to use this library in Vue.js you only have to insert the following snippet in the App.vue JavaScript section:
+
+```javascript
+const ScrollEffect = require("scroll-effect");
+
+document.addEventListener("DOMContentLoaded", function() {
+  ScrollEffect.init();
+});
+```
