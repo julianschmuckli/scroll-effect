@@ -34,6 +34,6 @@ If you want to use this library in Vue.js you only have to insert the following 
 const ScrollEffect = require("scroll-effect");
 
 document.addEventListener("DOMContentLoaded", function() {
-  ScrollEffect.init();
+  ScrollEffect.init(); //Initialize the scroll effect, when all the DOM elements has been loaded and placed.
 });
 ```
