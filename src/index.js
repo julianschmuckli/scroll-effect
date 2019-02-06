@@ -20,12 +20,19 @@ export function init(){
                 delay = 0;
               }
 
-              //Show it (may with delay)
-              setTimeout(function(){
+              //Show it
+              element.classList.remove("scroll-effect");
+              if(delay == 0){
                 element.style.removeProperty('opacity'); //Remove opacity
                 element.classList.add("animated");
                 element.classList.add(animation);
-              }, delay);
+              }else{
+                setTimeout(function(){
+                  element.style.removeProperty('opacity'); //Remove opacity
+                  element.classList.add("animated");
+                  element.classList.add(animation);
+                }, delay);
+              }
           }
       }
   };
