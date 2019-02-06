@@ -8,14 +8,24 @@ export function init(){
           var element = elements[i];
           var element_top = element.offsetTop - ($win.innerHeight / 2);
           if (element_top <= current_pos) { //If user has reached the position, show the element
-              element.style.removeProperty('opacity'); //Remove display none
               //Add animation class (according to Animate.css)
-              element.classList.add("animated");
               var animation = element.dataset.animation;
+              var delay = element.dataset.delay;
+
+              //Default values
               if(animation == undefined){
                 animation = "fadeIn";
               }
-              element.classList.add(animation);
+              if(delay == undefined){
+                delay = 0;
+              }
+
+              //Show it (may with delay)
+              setTimeout(function(){
+                element.style.removeProperty('opacity'); //Remove opacity
+                element.classList.add("animated");
+                element.classList.add(animation);
+              }, delay);
           }
       }
   };
