@@ -23,12 +23,12 @@ export function init(){
               //Show it
               element.classList.remove("scroll-effect");
               if(delay == 0){
-                element.style.removeProperty('opacity'); //Remove opacity
+                //element.style.removeProperty('opacity'); //Remove opacity
                 element.classList.add("animated");
                 element.classList.add(animation);
               }else{
                 setTimeout(function(){
-                  element.style.removeProperty('opacity'); //Remove opacity
+                  //element.style.removeProperty('opacity'); //Remove opacity
                   element.classList.add("animated");
                   element.classList.add(animation);
                 }, delay);
