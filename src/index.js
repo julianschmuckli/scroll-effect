@@ -6,7 +6,9 @@ export function init(){
       var elements = document.getElementsByClassName("scroll-effect");
       for (var i = 0; i < elements.length; i++) {
           var element = elements[i];
-          var element_top = element.offsetTop - ($win.innerHeight / 2);
+
+          var offsetFactor = element.dataset.offsetFactor || 1.5;
+          var element_top = element.offsetTop - ($win.innerHeight / offsetFactor);
           if (element_top <= current_pos) { //If user has reached the position, show the element
               //Add animation class (according to Animate.css)
               var animation = element.dataset.animation;
